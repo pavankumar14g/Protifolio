@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="icon" type="image/png" href="images/WhatsApp Image 2025-07-17 at 15.53.36_8013a1a3.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .left {
+      flex: 1;
+      background-image: url("images/WhatsApp Image 2025-07-17 at 15.53.36_8013a1a3.jpg");
+      background-size: cover;
+      background-position: bottom;
+      position: relative;
+    }
+    .left::before {
+      content: "";
+      position: absolute;
+      top: 50;
+      left: 0;
+      right: 0;
+      bottom: 100;
+      background: linear-gradient(-30deg,
+        rgba(42, 84, 250, 0.5) 0%,
+        rgba(42, 84, 250, 0.5) 40%,
+        transparent 60%,
+        transparent 100%
+      );
+    }
+    .left .overlay-text {
+      position: absolute;
+      bottom: 100px;
+      left:50%;
+      transform:translate(-50%);
+      color: white;
+      text-align:center;
+    }
+    .left .overlay-text h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .left .overlay-text p {
+      margin: 5px 0 10px;
+      font-size: 16px;
+    }
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons li a {
+      color: #fff;
+      font-size: 18px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 32px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .social-icons li a:hover {
+      background: #061968;
+      color: #fff;
+      border-color: #2a54fa;
+    }
+    .right {
+      flex: 1;
+      background:linear-gradient(180deg, #dee2e3, #bfdcf7);
+      width:100%;
+      height:100vh; 
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .right h2 {
+      font-size: bold;
+      border-bottom:2px solid #051d86;
+      display:inline-block;
+      margin-bottom: 10px;
+    }
+    .right p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .education-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    .education-list li {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 3px solid #051d86;
+    }
+    .education-list strong {
+      font-size: 16px;
+      color: #0324a7;
+    }
+
+    @media (max-width: 768px) {
+      body, html {
+        height: auto;
+        overflow: auto;
+      }
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+      .left, .right {
+        flex: unset;
+        width: 100%;
+        height: auto;
+      }
+      .left {
+        min-height: 300px;
+      }
+      .left .overlay-text {
+        bottom: 20px;
+      }
+      .left .overlay-text h1 {
+      font-size: 5vw;
+      margin-bottom: 5px;
+      white-space: nowrap;
+    }
+
+      .left .overlay-text p {
+        font-size: 14px;
+      }
+      .social-icons a {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+      }
+      .right {
+        padding: 20px;
+      }
+    }
+
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="overlay-text">
+        <h1>I'm Pavan Kumar Gundluru</h1>
+        <p>Java Full Stack Developer</p>
+        <ul class="social-icons">
+          <li><a href="https://www.linkedin.com/in/pavan-kumar-gundluru?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/pavankumar._.43?igsh=ZHZocDFlbnZ6cTBk&utm_source=qr"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <h2>About Me</h2>
+      <p>
+        I am a B.Tech Computer Science Engineering student with a keen interest in Java Full Stack Development. 
+        I have developed a solid foundation in core Java, Spring Boot, and database management, along with 
+        hands-on experience in building full-stack web applications. While I enjoy working across the stack, 
+        I am especially fascinated by front-end development and love creating responsive, user-friendly interfaces
+         using HTML, CSS, JavaScript, and frameworks like React. I am always eager to learn new technologies, 
+         improve my skills, and work on innovative projects that merge functionality with great design.
+      </p>
+      <h2>Education</h2>
+        <ul class="education-list">
+          <li>
+            <strong>Btech (CSE)</strong><br/>
+            Mohan Babu University, Tirupati<br/>
+            CGPA: 8.61 (2022-2026)
+          </li>
+          <li>
+            <strong>Intermediate (MPC)</strong><br/>
+            NRI COEDUCATION JR COLLEGE<br/>
+            CGPA: 81 (2020-2022)
+          </li>
+          <li>
+            <strong>SSC</strong><br/>
+            A P MODEL SCHOOL PENAGALURU<br/>
+            CGPA: 80 (2020)
+          </li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5948/5948060.png" />
+  <title>My Certificates</title>
+  <style>
+    body {
+      font-family:sans-serif;
+      background:linear-gradient(to right, #000428,#004e92);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .certificate-card {
+      background-color: #067fa1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .certificate-card:hover {
+      transform: scale(1.03);
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .certificate-card p {
+      text-align: center;
+      padding: 10px;
+      font-weight: 500;
+      color: white;
+    }
+
+    /* Popup overlay */
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .popup .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 100px;
+        margin-bottom: 20px;
+      }
+      .certificate-card img {
+        height: 200px; 
+      }
+      .certificate-card p {
+        font-size: 14px;
+        padding: 8px;
+      }
+      .popup img {
+        max-width: 95%;
+        max-height: 80%;
+      }
+      .popup .close-btn {
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>My Certificates</h1>
+  <div class="certificate-grid">
+    <div class="certificate-card" onclick="openPopup('images/JavaFullStackDeveloper.jpg')">
+      <img src="java fuulstack developer.jpg" alt="Java Full Stack Certification">
+      <p>Java Full Stack Certification</p>
+    </div>
+    <div class="certificate-card" onclick="openPopup('images/windows_Command_Prompt .jpg')">
+      <img src="microsoft.jpg" alt="Microsoft Office">
+      <p>Microsoft Office</p>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="Full Image">
+  </div>
+
+ 
+  <script>
+    function openPopup(imageSrc) {
+      document.getElementById("popup-img").src = imageSrc;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popup-img").src = "";
+    }
+  </script>
+
+</body>
+</html>
